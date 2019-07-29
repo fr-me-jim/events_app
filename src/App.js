@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Form from './components/Form';
+import EventsList from './components/EventsList';
 
 
 import CategoriesProvider from './context/CategoriesContext';
@@ -14,6 +15,8 @@ function App() {
 
         <div className="uk-container">
           <Form />
+
+          <EventsList />
         </div>
       </CategoriesProvider>
     </EventsProvider>
