@@ -1,10 +1,13 @@
 import React from 'react';
+import Header from './components/Header';
+
+import CategoriesProvider from './context/CategoriesContext';
 
 function App() {
   return (
-    <div className="App">
-      <h1>From APP.js</h1>
-    </div>
+    <CategoriesProvider>
+      <Header />
+    </CategoriesProvider>
   );
 }
 
