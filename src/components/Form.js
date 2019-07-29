@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 
+import { CategoriesConsumer } from '../context/CategoriesContext';
+
 class Form extends Component {
     state = { 
         name : '',
         category : ''
     }
+
+    //if the user search an event or category
+    handleGetDataEvent = e => {
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
+
     render() { 
         return ( 
             <form>
@@ -21,7 +32,7 @@ class Form extends Component {
                             className="uk-input"
                             placeholder="Name or City of the Event"
                             type="text"
-                        
+                            onChange={this.handleGetDataEvent}
                         />
                     </div>
 
@@ -29,7 +40,21 @@ class Form extends Component {
                         <select 
                             name="category" 
                             className="uk-select"
+                            onChange={this.handleGetDataEvent}
                         >
+                            <option value="">--Select Category--</option>
+                            <CategoriesConsumer>
+                                {(value) => {
+                                    return (
+                                        value.categories.map(category => (
+                                            <option key={category.id}  value={category.id} 
+                                                data-uk-form-select >
+                                                    {category.name}
+                                            </option>
+                                        ) )
+                                    );
+                                }}
+                            </CategoriesConsumer>
                             
                         </select>
                     </div>
