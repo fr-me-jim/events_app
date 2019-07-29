@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-Events App made with React and [Context React](https://es.reactjs.org/docs/context.html) + [EventBrite API](https://www.eventbrite.com/platform/api)
+An events app made with React and [Context React](https://es.reactjs.org/docs/context.html) + [EventBrite API](https://www.eventbrite.com/platform/api)
 
 ### Aim 
 
