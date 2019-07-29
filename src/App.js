@@ -4,16 +4,19 @@ import Form from './components/Form';
 
 
 import CategoriesProvider from './context/CategoriesContext';
+import EventsProvider from './context/EventsContext';
 
 function App() {
   return (
-    <CategoriesProvider>
-      <Header />
+    <EventsProvider>
+      <CategoriesProvider>
+        <Header />
 
-      <div className="uk-container">
-        <Form />
-      </div>
-    </CategoriesProvider>
+        <div className="uk-container">
+          <Form />
+        </div>
+      </CategoriesProvider>
+    </EventsProvider>
   );
 }
 
