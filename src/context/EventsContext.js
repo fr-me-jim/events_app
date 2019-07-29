@@ -15,8 +15,7 @@ class EventsProvider extends Component {
     }
 
     handleGetEvents = async (search) => {
-        let url = `https://www.eventbriteapi.com/v3/events/search/?token${this.token}&
-        q=${search.name}&categories=${search.category}&sort_by=${sort}`;
+        let url = `https://www.eventbriteapi.com/v3/events/search/?token=${this.token}&q=${search.name}&categories=${search.category}&sort_by=${this.sort}`;
 
         //look up API with url
         const events = await axios.get(url);
