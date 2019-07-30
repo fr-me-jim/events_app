@@ -30,3 +30,6 @@ h1 {
 .uk-button.uk-button-secundary:hover {
   background-color: #ec3a49c0;
 }
+.uk-button.uk-button-danger:hover {
+  background-color: #ec3a49c0;
+}
