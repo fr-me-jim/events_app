@@ -22,3 +22,11 @@ h1 {
   width: 100%;
   background-color: #ec3a49;
 }
+
+.uk-button.uk-button-secundary {
+  color: #e5e5e5;
+}
+
+.uk-button.uk-button-secundary:hover {
+  background-color: #ec3a49c0;
+}
